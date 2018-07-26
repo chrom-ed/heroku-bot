@@ -3,7 +3,6 @@ import tweepy
 import json
 import time
 
-
 # Twitter API Keys
 from config import consumer_key, consumer_secret, access_token, access_token_secret
 
@@ -11,7 +10,6 @@ from config import consumer_key, consumer_secret, access_token, access_token_sec
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
-
 
 # Create a function that tweets
 api.update_status('HerokuTweet')
